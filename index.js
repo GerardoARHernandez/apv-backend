@@ -24,6 +24,12 @@ const corsOpciones = {
     }
 };
 
+app.use(
+    cors({
+      origin: '*',
+    }),
+  );
+
 app.use(cors(corsOpciones));
 
 app.use('/api/veterinarios', veterinarioRoutes); 
